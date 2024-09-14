@@ -1,0 +1,318 @@
+.emllc__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 6rem;
+}
+
+.emllc__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.emllc__navbar-links_logo {
+    margin-right: 2rem;
+}
+
+.emllc__navbar-links_logo img {
+    width: 62.56px;
+    height: 16.02px;
+}
+
+.emllc__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.emllc__navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+
+  .emllc__navbar-links a:hover {
+    color: #ccc;
+    transition: color 0.3s ease;
+
+  }
+  
+.emllc__navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.emllc__navbar-sign button {
+    background-color: #FF4820;
+    color: white;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+}
+
+.emllc__navbar-sign button:hover {
+    background-color: #CC3A1A;
+    transition: background-color 0.3s ease;
+}
+.emllc__navbar-sign p {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.emllc__navbar-sign p:hover {
+    color: #ccc;
+}
+.emllc__navbar-links_container p,
+.emllc__navbar-sign p,
+.emllc__navbar-menu_container p {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.emllc__navbar-sign button,
+.emllc__navbar-menu_container button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #FF4820;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.emllc__navbar-menu {
+    margin-left: 1rem;
+
+    display: none;
+    position: relative;
+}
+
+.emllc__navbar-menu svg {
+    cursor: pointer;
+}
+
+.emllc__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    
+    text-align: end;
+    background: var(--color-footer);
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+}
+
+.emllc__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+.emllc__navbar-menu_container-links-sign {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .emllc__navbar-links_container {
+        display: none;
+    }
+
+    .emllc__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .emllc__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .emllc__navbar {
+        padding: 2rem;
+    }
+
+    .emllc__navbar-sign {
+        display: none;
+    }
+
+    .emllc__navbar-menu_container {
+        top: 20px;
+    }
+
+    .emllc__navbar-menu_container-links-sign {
+        display: block;
+    }
+}
+
+.form-container {
+    display: none; /* Initially hide the forms */
+}
+
+.emllc__navbar-sign-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+.login-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Assuming this color is for text */
+}
+
+.login-popup {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    background: -moz-radial-gradient(circle at 3% 50%, rgba(57, 121, 190, 0.1) 0%, rgba(4, 12, 24, 0.1) 25%);
+    background: radial-gradient(circle at 3% 50%, rgba(40, 104, 173, 0.1) 0%, rgba(4, 12, 24, 0.1) 25%);
+    background-color: #012348;
+    display: flex; 
+    justify-content: center;
+    align-items: horizontal;
+    flex-wrap: wrap;
+    border: 3.5px solid white;
+}
+
+.login-popup-content , .register-popup-content {
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 25px;
+}
+.login-popup-content form, .register-popup-content form {
+    margin-top: 20px;
+}
+.login-popup-content label, .register-popup label, .role-label {
+    margin-bottom: 3%;
+    color: white;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.form-label {
+    color: #ffffff; /* Change color of form labels */
+    font-size: 16px;
+  }
+  
+.login-popup button,
+.register-popup button {
+    background-color: #FF4820;
+    color: white;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.login-popup button:hover,
+.register-popup button:hover {
+    background-color: #CC3A1A;
+}
+
+.popup-buttons-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+.register-popup {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    background: -moz-radial-gradient(circle at 3% 50%, rgba(57, 121, 190, 0.1) 0%, rgba(4, 12, 24, 0.1) 25%);
+    background: radial-gradient(circle at 3% 50%, rgba(40, 104, 173, 0.1) 0%, rgba(4, 12, 24, 0.1) 25%);
+    background-color: #012348;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3.5px solid white;
+  }
+  
+  .register-popup-content {
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    margin-top: 20px; /* Add spacing between form and buttons */
+    margin-right: 10px;
+  }
+  
+  .button-container button {
+    flex: 1;
+  }
+
+.MuiRadio-root {
+    color: #FF4820;
+  }
+  
+  /* Style radio button labels */
+  .MuiFormControlLabel-label {
+    color: #ffffff;
+  }
+
+  .form-legend {
+    color: #ffffff; /* Change color of form legend */
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .role-label legend{
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+    line-height: 25px;
+    align-items:first baseline;
+    font-family: var(--font-family);
+}
