@@ -1,4 +1,4 @@
-import { FormLabel } from '@material-ui/core';
+import { FormLabel } from '@mui/material';
 import React from 'react';
 
 const LoginPopup = ({ onClose }) => {
