@@ -3,7 +3,7 @@ import emllcLogo from '../../logo.svg';
 import './footer.css';
 
 const Footer = () => (
-  <div className="emllc__footer section__padding">
+  <div className="emllc__footer">
 
     <div className="emllc__footer-links">
       <div className="emllc__footer-links_logo">

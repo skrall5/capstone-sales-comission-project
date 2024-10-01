@@ -166,7 +166,7 @@ const Form = () => {
   return (
     <div className="emllc__whatemllc section__margin" id="emllc">
       <div className="emllc__whatemllc-heading">
-        <h1 className="gradient__text">Commission Plan Form Options</h1>
+        <h1>Commission Plan Form Options</h1>
         <div className="buttons-container">
           <button type="button" onClick={showAdmin}>Open Admin Form</button>
           <button type="button" onClick={showSalesRep}>Open Sales Rep Form</button>
@@ -178,9 +178,10 @@ const Form = () => {
         <div className="form">
           {showAdminForm && (
             <form onSubmit={handleSubmitAdmin}>
+              <p>Fields marked with <span style={{color: 'red'}}>*</span> are required.</p><br />
               <div>
-                <FormLabel htmlFor="company">Organization name/division:</FormLabel>
-                <input type="text" id="company" name="company" placeholder="Organization name" required onChange={handleAdminChange} />
+                <FormLabel htmlFor="company"><span style={{ color: 'red' }}>*</span> Organization Name/Division:</FormLabel>
+                <input type="text" id="company" name="company" placeholder="Organization  Name" required onChange={handleAdminChange} />
               </div>
               <br />
               <div>
@@ -222,12 +223,12 @@ const Form = () => {
               </div>
               <br />
               <div>
-                <FormLabel htmlFor="fiscalYearStart">Fiscal Year Start Date:</FormLabel>
+                <FormLabel htmlFor="fiscalYearStart"><span style={{color: 'red'}}>*</span> Fiscal Year Start Date:</FormLabel>
                 <input type="date" id="fiscalYearStart" name="fiscalYearStart" required />
               </div>
               <br />
               <div>
-                <FormLabel htmlFor="fiscalYearEnd">Fiscal Year End Date:</FormLabel>
+                <FormLabel htmlFor="fiscalYearEnd"><span style={{color: 'red'}}>*</span> Fiscal Year End Date:</FormLabel>
                 <input type="date" id="fiscalYearEnd" name="fiscalYearEnd" required />
               </div>
               <br />
@@ -242,8 +243,8 @@ const Form = () => {
               </div>
               <br />
               <div>
-                <FormLabel htmlFor="rampTime">Sales Person Ramp up time:</FormLabel>
-                <input type="number" id="rampTime" name="rampTime" placeholder="Ramp up time" required />
+                <FormLabel htmlFor="rampTime"><span style={{color: 'red'}}>*</span> Salesperson Ramp Up Time:</FormLabel>
+                <input type="number" id="rampTime" name="rampTime" placeholder="Ramp Up Time" required />
               </div>
               <br />
               <div>
@@ -273,22 +274,22 @@ const Form = () => {
               </div>
               <div>
                 <FormLabel htmlFor="a1">0-50%: </FormLabel>
-                <input type="number" id="a1" name="a1" placeholder="num" step="0.01" />
+                <input type="number" id="a1" name="a1" placeholder="number" step="0.01" />
                 <br /> <br />
               </div>
               <div>
                 <FormLabel htmlFor="a2">51-100%: </FormLabel>
-                <input type="number" id="a2" name="a2" placeholder="num" step="0.01" />
+                <input type="number" id="a2" name="a2" placeholder="number" step="0.01" />
                 <br /> <br />
               </div>
               <div>
                 <FormLabel htmlFor="a3">101-150%: </FormLabel>
-                <input type="number" id="a3" name="a3" placeholder="num" step="0.01" />
+                <input type="number" id="a3" name="a3" placeholder="number" step="0.01" />
                 <br /> <br />
               </div>
               <div>
-                <FormLabel htmlFor="a4">150%+ </FormLabel>
-                <input type="number" id="a4" name="a4" placeholder="num" step="0.01" />
+                <FormLabel htmlFor="a4">150%+: </FormLabel>
+                <input type="number" id="a4" name="a4" placeholder="number" step="0.01" />
               </div>
 
               <br />
@@ -300,48 +301,49 @@ const Form = () => {
           {showSalesRepForm && (
             <div className="form">
               <form onSubmit={handleSubmitSalesRep}>
+                <p>Fields marked with <span style={{color: 'red'}}>*</span> are required.</p><br />
                 <div>
-                  <FormLabel htmlFor="employeeName">Employee Name *</FormLabel>
+                  <FormLabel htmlFor="employeeName"><span style={{color: 'red'}}>*</span> Employee Name:</FormLabel>
                   <input type="text" id="employeeName" name="employeeName" required placeholder="John Doe" onChange={handleSalesRepChange} />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="company">Organization name/division:</FormLabel>
-                  <input type="text" id="company" name="company" placeholder="Organization name" required />
+                  <FormLabel htmlFor="company"><span style={{color: 'red'}}>*</span> Organization Name/Division:</FormLabel>
+                  <input type="text" id="company" name="company" required placeholder="Organization Name" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="title">Employee Title *</FormLabel>
+                  <FormLabel htmlFor="title"><span style={{color: 'red'}}>*</span> Employee Title:</FormLabel>
                   <input type="text" id="title" name="title" required placeholder="Sales Manager" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="managersName">Manager Name </FormLabel>
+                  <FormLabel htmlFor="managersName">Manager Name:</FormLabel>
                   <input type="text" id="managersName" name="managersName" placeholder="John Doe" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="currentJobTitle">Current job title *</FormLabel>
-                  <input type="text" id="currentJobTitle" name="currentJobTitle" required placeholder="Title" />
+                  <FormLabel htmlFor="currentJobTitle">Current Job Title:</FormLabel>
+                  <input type="text" id="currentJobTitle" name="currentJobTitle" placeholder="Job Title" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="startDate">Start date with the company *</FormLabel>
+                  <FormLabel htmlFor="startDate"><span style={{color: 'red'}}>*</span> Start Date at the Company:</FormLabel>
                   <input type="date" id="startDate" name="startDate" required />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="baseSalary">Base Compensation *</FormLabel>
+                  <FormLabel htmlFor="baseSalary"><span style={{color: 'red'}}>*</span> Base Compensation:</FormLabel>
                   <input type="number" id="baseSalary" name="baseSalary" required placeholder="100000" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="comRate">Commission Rate *</FormLabel>
+                  <FormLabel htmlFor="comRate"><span style={{color: 'red'}}>*</span> Commission Rate:</FormLabel>
                   <input type="number" id="comRate" name="comRate" required placeholder="10%" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="totalQuota">Total Quota *</FormLabel>
+                  <FormLabel htmlFor="totalQuota"><span style={{color: 'red'}}>*</span> Total Quota:</FormLabel>
                   <input type="number" id="totalQuota" name="totalQuota" required placeholder="1000000" />
                 </div>
                 <br />
@@ -356,17 +358,17 @@ const Form = () => {
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="hardwareQuota">Yearly Quota Split For Hardware </FormLabel>
+                  <FormLabel htmlFor="hardwareQuota">Yearly Quota Split For Hardware:</FormLabel>
                   <input type="number" id="hardwareQuota" name="hardwareQuota" placeholder="500000" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="softwareQuota">Yearly Quota Split For Software </FormLabel>
+                  <FormLabel htmlFor="softwareQuota">Yearly Quota Split For Software:</FormLabel>
                   <input type="number" id="softwareQuota" name="softwareQuota" placeholder="500000" />
                 </div>
                 <br />
                 <div>
-                  <FormLabel htmlFor="servicesQuota">Yearly Quota Split For Services </FormLabel>
+                  <FormLabel htmlFor="servicesQuota">Yearly Quota Split For Services:</FormLabel>
                   <input type="number" id="servicesQuota" name="servicesQuota" placeholder="500000" />
                 </div>
                 <br />

@@ -4,6 +4,7 @@ import { Navbar } from './Components';
 import { Footer, Form, Header } from './containers';
 
 import './App.css';
+import './index.css'; /* added during polishing frontend to access root vars*/
 
 const App = () => (
   <div className="App">
