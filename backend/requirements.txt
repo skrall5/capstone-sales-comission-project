@@ -1,0 +1,7 @@
+seaborn
+reportlab
+scikit-learn
+tensorflow
+flask
+pymongo
+flask_cors

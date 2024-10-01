@@ -1,4 +1,4 @@
-import { FormLabel } from '@material-ui/core';
+import { FormLabel } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
 import './form.css';
