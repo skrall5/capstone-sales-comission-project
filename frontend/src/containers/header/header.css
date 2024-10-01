@@ -1,3 +1,4 @@
+
 .emllc__header {
     display: flex;
     flex-direction: row;
@@ -18,6 +19,7 @@
     font-weight: 800;
     font-size: 62px;
     line-height: 75px;
+    color: #fff;
     letter-spacing: -0.04em;
 }
 
